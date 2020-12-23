@@ -41,7 +41,9 @@
   .main.container {
     margin-top: 7em;
   }
-
+.gosterme {
+    display:none!important;
+  }
   .ui.footer.segment {
     margin: 5em 0em 0em;
     padding: 5em 0em;
@@ -59,11 +61,11 @@
       <a href="https://semantic-ui.com/examples/fixed.html#" class="header item">
       <img src="./src/shipping-logo-long-white.png" class="ui logo centered small image">
       </a>
-      <a href="https://semantic-ui.com/examples/fixed.html#" class="item">Home</a>
+      <a href="https://semantic-ui.com/examples/fixed.html#" class="item">Dashboard</a>
       <div class="ui simple dropdown item">
-        Dropdown <i class="dropdown icon"></i>
+        Customers <i class="dropdown icon"></i>
         <div class="menu">
-          <a class="item" href="https://semantic-ui.com/examples/fixed.html#">Link Item</a>
+          <a class="item" href="https://semantic-ui.com/examples/fixed.html#">All Customers</a>
           <a class="item" href="https://semantic-ui.com/examples/fixed.html#">Link Item</a>
           <div class="divider"></div>
           <div class="header">Header Item</div>
@@ -123,7 +125,7 @@
                         </h2>
                     </div>
                     <div class="blue extra content">
-                      <span style="color:blue;"><a hrefs="" style="text-align: center;"><p><i class="right plus icon"></i>Click for more</p></a></span>
+                      <span style="color:blue; id=todays-order-button"><a hrefs="" style="text-align: center;"><p><i class="right plus icon"></i>Click for more</p></a></span>
                     </div>
                   </div>
                 </div>
@@ -148,7 +150,7 @@
                         </h2>
                     </div>
                     <div class="blue extra content">
-                      <span style="color:blue;"><a hrefs="" style="text-align: center;" id="customer-details-button"><p><i class="right plus icon"></i>Click for more</p></a></span>
+                      <span style="color:blue;"><a href="" style="text-align: center;" id="customer-details-button"><p><i class="right plus icon"></i>Click for more</p></a></span>
                     </div>
                   </div>
                 </div>
@@ -157,7 +159,7 @@
                   <div class="ui card">
                     
                     <div class="content">
-                      <div class="header" style="text-align: center;">Online Customers</div>
+                     <div class="header" style="text-align: center;">Online Customers</div>
                     </div>
                     <div class="content">
                       
@@ -173,7 +175,7 @@
                         </h2>
                     </div>
                     <div class="olive extra content">
-                      <span style="color:blue;"><a hrefs="" style="text-align: center;"><p><i class="right plus icon"></i>Click for more</p></a></span>
+                      <span style="color:blue;"><a href="history-page.php" style="text-align: center;"><p><i class="right plus icon"></i>Click for more</p></a></span>
                     </div>
                   </div>
                 </div>
@@ -198,7 +200,7 @@
                         </h2>
                     </div>
                     <div class="blue extra content">
-                      <span style="color:blue;"><a hrefs="" style="text-align: center;"><p><i class="right plus icon"></i>Click for more</p></a></span>
+                      <span style="color:blue;"><a href="" style="text-align: center;"><p><i class="right plus icon"></i>Click for more</p></a></span>
                     </div>
                   </div>
                 </div>
@@ -227,72 +229,31 @@
 <?php include_once "footer.php" ?>
 
 
+      <div class="ui modal" id="add-new-user-modal">
+        <div class="scrolling content" style="margin-bottom:50px;">
+          <?php include_once "./admin-files/add-new-user.php" ?>
+        </div>
+      </div>
       <div class="ui modal" id="customer-details-modal">
         <div class="scrolling content" style="margin-bottom:50px;">
           <?php include_once "./admin/customer-table.html" ?>
         </div>
       </div>
-      <div class="ui modal" id="new-user-modal">
-        <!-- customer's general form --> 
-        <h2 class="ui header" style="margin-bottom:20px;">Add Customer</h2>
-        
-        <form class="ui form" style="margin:10px;">
-        <h4 class="ui dividing header">Customer Information</h4>
-          <div class="field">
-            <label>Name</label>
-            <div class="two fields">
-              <div class="field">
-                <input type="text" name="customer[first-name]" placeholder="First Name">
-              </div>
-              <div class="field">
-                <input type="text" name="customer[last-name]" placeholder="Last Name">
-              </div>
-            </div>
-
-          </div>
-
-          <div class="field">
-            <label>E- Mail</label>
-          <div class="two fields">
-              <div class="field">
-                <input type="text" name="customer[e-mail]" placeholder="E-Mail">
-              </div>
-              <div class="field">
-                <input type="text" name="customer[phone]" placeholder="Phone">
-              </div>
-            </div>
-         </div>
-
-         <h4 style="margin-button:50px" class="ui dividing header">Partnership Information</h4>
-
-         <div class="field">
-          <div class="two fields">
-              <div class="field">
-                <input type="text" name="customer[company-name]" placeholder="Company Name">
-              </div>
-              <div class="field">
-                <input type="text" name="customer[website]" placeholder="Website">
-              </div>
-            </div>
-         </div>
-
-         <div class="two fields">
-              <div class="field">
-                <input type="text" name="customer[govID]" placeholder="Gov ID">
-              </div>
-            </div>
-      </div>
-
-
 <script>
   $("#new-user-button").click( function(){
-              $("#new-user-modal").modal("show");
+              $("#add-new-user-modal").modal("show");
         });
 
   $(document).ready( function () {
             $('#admin-tablo').DataTable();
             console.log("calışır");
-  });
+            
+            $('.account-settings-modal.menu .item').tab({history:false});
+                $('#password-reset-controller').click(function(){      
+                    $("#password-reset-form").toggleClass('gosterme');
+                });
+            });
+    
   $("#customer-details-button").click( function(){
               $("#customer-details-modal").modal("show");
         });
@@ -321,5 +282,6 @@ var chart = new Chart(ctx, {
     options: {}
 });
 //CHART ENDS
+   
 </script>
 </body></html>

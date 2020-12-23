@@ -1,9 +1,10 @@
+<div class="ui segment">
 <?php
 require_once "vendor/autoload.php";  
 use GuzzleHttp\Client;
 $client = new GuzzleHttp\Client();
 try {
-       $responseArray = $client->request('GET', 'http://ssapi.shipstation.com/orders?customerName=headhoncho@whitehouse.gov&page=1&pageSize=30', ['auth' => ['7ef956961bfd449da92bfc206f315c83', 'c295dc04fed743fd8cd7269b82a3da8b']]);   
+       $responseArray = $client->request('GET', 'http://ssapi.shipstation.com/orders?customerName=headhoncho@whitehouse.gov&orderStatus=awaiting_shipment&page=1&pageSize=100', ['auth' => ['7ef956961bfd449da92bfc206f315c83', 'c295dc04fed743fd8cd7269b82a3da8b']]);   
        if($responseArray->getStatusCode()!= 200){
          throw new Exception("Error");
        }
@@ -14,11 +15,13 @@ try {
       echo 'Message: Connection Error ' .$e->getMessage();
     }
 ?>
-<form id="frm-example" action="" method="POST">
+
+<form id="frm-example" action="index.php" method="POST">
 <input class="ui red compact labeled icon button" onClick="return confirm('Are you sure you want to delete?')" type="submit" name="delete-order" value="Delete Orders">
 <input class="ui blue compact labeled icon button" type="submit" name="update-order" value="Update Orders">
 <input class="ui green compact labeled icon button" type="submit" name="create-label" value="Create Label">
 <input class="ui purple compact labeled icon button" type="submit" name="void-label" value="Void Label">
+
 
 
 <table id="example" class="display" cellspacing="0" width="100%">
@@ -29,7 +32,7 @@ try {
          <th>Order ID</th>
          <th>Service</th>
          <th>Receipient</th>
-         <th>Ship Date</th>
+         <th>Order Date</th>
          <th>Order Status</th>
       </tr>
    </thead>
@@ -43,7 +46,7 @@ try {
          <td><?php echo $arr_body["orders"][$x]["carrierCode"]  ?></td>
          <td><?php echo $arr_body["orders"][$x]["billTo"]["name"]  ?></td>
          <td><?php
-         $now = new DateTime($arr_body["orders"][$x]["shipByDate"] );
+         $now = new DateTime($arr_body["orders"][$x]["orderDate"] );
          echo $now->format('Y-m-d') 
           ?></td>
 <td><?php echo $arr_body["orders"][$x]["orderStatus"]  ?></td> 
@@ -58,7 +61,7 @@ try {
          <th>Order ID</th>
          <th>Service</th>
          <th>Receipient</th>
-         <th>Ship Date</th>
+         <th>Order Date</th>
          <th>Order Status</th>
       </tr>
    </tfoot> 
@@ -74,7 +77,7 @@ try {
               List Order
             </button>  -->
 <!-- <p><button>Submit</button></p> -->
-
+</div>
 <p><b>Selected rows data:</b></p>
 <pre id="example-console-rows"></pre>
 
@@ -256,5 +259,56 @@ function check_uncheck_checkbox(isChecked) {
 		});
 	}
 }
+
+</script>
+<script>
+
+ var table = $('#example').DataTable({     
+ 'columnDefs': [
+    {
+        'targets': 0,
+        'checkboxes': {
+        'selectRow': true
+        }
+     }
+    ],
+'select': {
+    'style': 'multi'
+ },
+'order': [[1, 'asc']]
+});
+      
+// Handle form submission event 
+$('#frm-example').on('submit', function(e){
+    var form = this;
+    
+    var rows_selected = table.column(0).checkboxes.selected();
+
+    // Iterate over all selected checkboxes
+    $.each(rows_selected, function(index, rowId){
+        // Create a hidden element 
+        $(form).append(
+            $('<input>')
+                .attr('type', 'hidden')
+                .attr('name', 'id[]')
+                .val(rowId)
+        );
+    });
+
+    // FOR DEMONSTRATION ONLY
+    // The code below is not needed in production
+    
+    // Output form data to a console     
+    $('#example-console-rows').text(rows_selected.join(","));
+    
+    // Output form data to a console     
+    $('#example-console-form').text($(form).serialize());
+    
+    // Remove added elements
+    $('input[name="id\[\]"]', form).remove();
+    
+    // Prevent actual form submission
+    e.preventDefault();
+});   
 
 </script>

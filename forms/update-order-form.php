@@ -1,11 +1,11 @@
-<form id="newOrder" class="ui form" method= "POST">
+<form id="updateOrders" class="ui form" method= "POST">
 
-  <h4 class="ui dividing header">Shipping Information</h4>
+  <h4 class="ui dividing header">Update Order</h4>
   <div class="field">
     <label>E-Mail</label>
     <div class="sixteen wide field">
       <div class="field">
-        <input type="text" name="email" placeholder="EMail">
+        <input type="text" name="email" placeholder="Mustafa">
       </div>
     </div>
   </div>
@@ -26,59 +26,59 @@
   <div class="two fields" style="z-index:99;">
     <div class="field">
       <label name="state">State</label>
-      <select name="state" class="ui fluid dropdown">
-      <option value="secilmemis">State</option>
-    <option value="Alabama">Alabama</option>
-    <option value="Alaska">Alaska</option>
-    <option value="Arizona">Arizona</option>
-    <option value="Arkansas">Arkansas</option>
-    <option value="California">California</option>
-    <option value="Colorado">Colorado</option>
-    <option value="Connecticut">Connecticut</option>
-    <option value="Delaware">Delaware</option>
-    <option value="District Of Columbia">District Of Columbia</option>
-    <option value="Florida">Florida</option>
-    <option value="Georgia">Georgia</option>
-    <option value="Hawaii">Hawaii</option>
-    <option value="Idaho">Idaho</option>
-    <option value="Illinois">Illinois</option>
-    <option value="Indiana">Indiana</option>
-    <option value="Iowa">Iowa</option>
-    <option value="Kansas">Kansas</option>
-    <option value="Kentucky">Kentucky</option>
-    <option value="Louisiana">Louisiana</option>
-    <option value="Maine">Maine</option>
-    <option value="Maryland">Maryland</option>
-    <option value="Massachusetts">Massachusetts</option>
-    <option value="Michigan">Michigan</option>
-    <option value="Minnesota">Minnesota</option>
-    <option value="Mississippi">Mississippi</option>
-    <option value="Missouri">Missouri</option>
-    <option value="Montana">Montana</option>
-    <option value="Nebraska">Nebraska</option>
-    <option value="Nevada">Nevada</option>
-    <option value="New Hampshire">New Hampshire</option>
-    <option value="New Jersey">New Jersey</option>
-    <option value="New Mexico">New Mexico</option>
-    <option value="New York">New York</option>
-    <option value="North Carolina">North Carolina</option>
-    <option value="North Dakota">North Dakota</option>
-    <option value="Ohio">Ohio</option>
-    <option value="Oklahoma">Oklahoma</option>
-    <option value="Oregon">Oregon</option>
-    <option value="Pennsylvania">Pennsylvania</option>
-    <option value="Rhode Island">Rhode Island</option>
-    <option value="South Carolina">South Carolina</option>
-    <option value="South Dakota">South Dakota</option>
-    <option value="Tennessee">Tennessee</option>
-    <option value="Texas">Texas</option>
-    <option value="Utah">Utah</option>
-    <option value="Vermont">Vermont</option>
-    <option value="Virginia">Virginia</option>
-    <option value="Washington">Washington</option>
-    <option value="West Virginia">West Virginia</option>
-    <option value="Wisconsin">Wisconsin</option>
-    <option value=">Wyoming">Wyoming</option>
+      <select class="ui fluid dropdown">
+        <option name="state" value="">State</option>
+    <option value="AL">Alabama</option>
+    <option value="AK">Alaska</option>
+    <option value="AZ">Arizona</option>
+    <option value="AR">Arkansas</option>
+    <option value="CA">California</option>
+    <option value="CO">Colorado</option>
+    <option value="CT">Connecticut</option>
+    <option value="DE">Delaware</option>
+    <option value="DC">District Of Columbia</option>
+    <option value="FL">Florida</option>
+    <option value="GA">Georgia</option>
+    <option value="HI">Hawaii</option>
+    <option value="ID">Idaho</option>
+    <option value="IL">Illinois</option>
+    <option value="IN">Indiana</option>
+    <option value="IA">Iowa</option>
+    <option value="KS">Kansas</option>
+    <option value="KY">Kentucky</option>
+    <option value="LA">Louisiana</option>
+    <option value="ME">Maine</option>
+    <option value="MD">Maryland</option>
+    <option value="MA">Massachusetts</option>
+    <option value="MI">Michigan</option>
+    <option value="MN">Minnesota</option>
+    <option value="MS">Mississippi</option>
+    <option value="MO">Missouri</option>
+    <option value="MT">Montana</option>
+    <option value="NE">Nebraska</option>
+    <option value="NV">Nevada</option>
+    <option value="NH">New Hampshire</option>
+    <option value="NJ">New Jersey</option>
+    <option value="NM">New Mexico</option>
+    <option value="NY">New York</option>
+    <option value="NC">North Carolina</option>
+    <option value="ND">North Dakota</option>
+    <option value="OH">Ohio</option>
+    <option value="OK">Oklahoma</option>
+    <option value="OR">Oregon</option>
+    <option value="PA">Pennsylvania</option>
+    <option value="RI">Rhode Island</option>
+    <option value="SC">South Carolina</option>
+    <option value="SD">South Dakota</option>
+    <option value="TN">Tennessee</option>
+    <option value="TX">Texas</option>
+    <option value="UT">Utah</option>
+    <option value="VT">Vermont</option>
+    <option value="VA">Virginia</option>
+    <option value="WA">Washington</option>
+    <option value="WV">West Virginia</option>
+    <option value="WI">Wisconsin</option>
+    <option value="WY">Wyoming</option>
       </select>
     </div>
     <div class="field">
@@ -88,84 +88,84 @@
         <i class="dropdown icon"></i>
         <div class="default text">Select Country</div>
         <div class="menu">
-        <div class="item" data-value="Afghanistan"><i class="af flag"></i>Afghanistan</div>
-            <div class="item" data-value="Aland Islands"><i class="ax flag"></i>Aland Islands</div>
-            <div class="item" data-value="Albania"><i class="al flag"></i>Albania</div>
-            <div class="item" data-value="Algeria"><i class="dz flag"></i>Algeria</div>
-            <div class="item" data-value="American Samoa"><i class="as flag"></i>American Samoa</div>
-            <div class="item" data-value="Andorra"><i class="ad flag"></i>Andorra</div>
-            <div class="item" data-value="Angola"><i class="ao flag"></i>Angola</div>
-            <div class="item" data-value="Anguilla"><i class="ai flag"></i>Anguilla</div>
-            <div class="item" data-value="Antigua"><i class="ag flag"></i>Antigua</div>
-            <div class="item" data-value="Argentina"><i class="ar flag"></i>Argentina</div>
-            <div class="item" data-value="Armenia"><i class="am flag"></i>Armenia</div>
-            <div class="item" data-value="Aruba"><i class="aw flag"></i>Aruba</div>
-            <div class="item" data-value="Australia"><i class="au flag"></i>Australia</div>
-            <div class="item" data-value="Austria"><i class="at flag"></i>Austria</div>
-            <div class="item" data-value="Azerbaijan"><i class="az flag"></i>Azerbaijan</div>
-            <div class="item" data-value="Bahamas"><i class="bs flag"></i>Bahamas</div>
-            <div class="item" data-value="Bahrain"><i class="bh flag"></i>Bahrain</div>
-            <div class="item" data-value="Bangladesh"><i class="bd flag"></i>Bangladesh</div>
-            <div class="item" data-value="Barbados"><i class="bb flag"></i>Barbados</div>
-            <div class="item" data-value="Belarus"><i class="by flag"></i>Belarus</div>
-            <div class="item" data-value="Belgium"><i class="be flag"></i>Belgium</div>
-            <div class="item" data-value="Belize"><i class="bz flag"></i>Belize</div>
-            <div class="item" data-value="Benin"><i class="bj flag"></i>Benin</div>
-            <div class="item" data-value="Bermuda"><i class="bm flag"></i>Bermuda</div>
-            <div class="item" data-value="Bhutan"><i class="bt flag"></i>Bhutan</div>
-            <div class="item" data-value="Bolivia"><i class="bo flag"></i>Bolivia</div>
-            <div class="item" data-value="Bosnia"><i class="ba flag"></i>Bosnia</div>
-            <div class="item" data-value="Botswana"><i class="bw flag"></i>Botswana</div>
-            <div class="item" data-value="Bouvet Island"><i class="bv flag"></i>Bouvet Island</div>
-            <div class="item" data-value="Brazil"><i class="br flag"></i>Brazil</div>
-            <div class="item" data-value="British Virgin Islands"><i class="vg flag"></i>British Virgin Islands</div>
-            <div class="item" data-value="Brunei"><i class="bn flag"></i>Brunei</div>
-            <div class="item" data-value="Bulgaria"><i class="bg flag"></i>Bulgaria</div>
-            <div class="item" data-value="Burkina Faso"><i class="bf flag"></i>Burkina Faso</div>
-            <div class="item" data-value="Burma"><i class="mm flag"></i>Burma</div>
-            <div class="item" data-value="Burundi"><i class="bi flag"></i>Burundi</div>
-            <div class="item" data-value="Caicos Islands"><i class="tc flag"></i>Caicos Islands</div>
-            <div class="item" data-value="Cambodia"><i class="kh flag"></i>Cambodia</div>
-            <div class="item" data-value="Cameroon"><i class="cm flag"></i>Cameroon</div>
-            <div class="item" data-value="Canada"><i class="ca flag"></i>Canada</div>
-            <div class="item" data-value="Cape Verde"><i class="cv flag"></i>Cape Verde</div>
-            <div class="item" data-value="Cayman Islands"><i class="ky flag"></i>Cayman Islands</div>
-            <div class="item" data-value="Central African Republic"><i class="cf flag"></i>Central African Republic</div>
-            <div class="item" data-value="Chad"><i class="td flag"></i>Chad</div>
-            <div class="item" data-value="Chile"><i class="cl flag"></i>Chile</div>
-            <div class="item" data-value="China"><i class="cn flag"></i>China</div>
-            <div class="item" data-value="Christmas Island"><i class="cx flag"></i>Christmas Island</div>
-            <div class="item" data-value="Cocos Islands"><i class="cc flag"></i>Cocos Islands</div>
-            <div class="item" data-value="Colombia"><i class="co flag"></i>Colombia</div>
-            <div class="item" data-value="Comoros"><i class="km flag"></i>Comoros</div>
-            <div class="item" data-value="Congo Brazzaville"><i class="cg flag"></i>Congo Brazzaville</div>
-            <div class="item" data-value="Congo"><i class="cd flag"></i>Congo</div>
-            <div class="item" data-value="Cook Islands"><i class="ck flag"></i>Cook Islands</div>
-            <div class="item" data-value="Costa Rica"><i class="cr flag"></i>Costa Rica</div>
-            <div class="item" data-value="Cote Divoire"><i class="ci flag"></i>Cote Divoire</div>
-            <div class="item" data-value="Croatia"><i class="hr flag"></i>Croatia</div>
-            <div class="item" data-value="Cuba"><i class="cu flag"></i>Cuba</div>
-            <div class="item" data-value="Cyprus"><i class="cy flag"></i>Cyprus</div>
-            <div class="item" data-value="Czech Republiccz"><i class="cz flag"></i>Czech Republic</div>
-            <div class="item" data-value="Denmark"><i class="dk flag"></i>Denmark</div>
-            <div class="item" data-value="Djibouti"><i class="dj flag"></i>Djibouti</div>
-            <div class="item" data-value="Dominica"><i class="dm flag"></i>Dominica</div>
-            <div class="item" data-value="Dominican Republic"><i class="do flag"></i>Dominican Republic</div>
-            <div class="item" data-value="Ecuador"><i class="ec flag"></i>Ecuador</div>
-            <div class="item" data-value="Egypt"><i class="eg flag"></i>Egypt</div>
-            <div class="item" data-value="El Salvador"><i class="sv flag"></i>El Salvador</div>
-            <div class="item" data-value="England"><i class="gb flag"></i>England</div>
-            <div class="item" data-value="Equatorial Guinea"><i class="gq flag"></i>Equatorial Guinea</div>
-            <div class="item" data-value="Eritrea"><i class="er flag"></i>Eritrea</div>
-            <div class="item" data-value="Estonia"><i class="ee flag"></i>Estonia</div>
-            <div class="item" data-value="Ethiopia"><i class="et flag"></i>Ethiopia</div>
-            <div class="item" data-value="European Union"><i class="eu flag"></i>European Union</div>
-            <div class="item" data-value="Falkland Islands"><i class="fk flag"></i>Falkland Islands</div>
-            <div class="item" data-value="Faroe Islands"><i class="fo flag"></i>Faroe Islands</div>
-            <div class="item" data-value="Fiji"><i class="fj flag"></i>Fiji</div>
-            <div class="item" data-value="Finland"><i class="fi flag"></i>Finland</div>
-            <div class="item" data-value="France"><i class="fr flag"></i>France</div>
-            <div class="item" data-value="French Guiana"><i class="gf flag"></i>French Guiana</div>
+            <div class="item" data-value="af"><i class="af flag"></i>Afghanistan</div>
+            <div class="item" data-value="ax"><i class="ax flag"></i>Aland Islands</div>
+            <div class="item" data-value="al"><i class="al flag"></i>Albania</div>
+            <div class="item" data-value="dz"><i class="dz flag"></i>Algeria</div>
+            <div class="item" data-value="as"><i class="as flag"></i>American Samoa</div>
+            <div class="item" data-value="ad"><i class="ad flag"></i>Andorra</div>
+            <div class="item" data-value="ao"><i class="ao flag"></i>Angola</div>
+            <div class="item" data-value="ai"><i class="ai flag"></i>Anguilla</div>
+            <div class="item" data-value="ag"><i class="ag flag"></i>Antigua</div>
+            <div class="item" data-value="ar"><i class="ar flag"></i>Argentina</div>
+            <div class="item" data-value="am"><i class="am flag"></i>Armenia</div>
+            <div class="item" data-value="aw"><i class="aw flag"></i>Aruba</div>
+            <div class="item" data-value="au"><i class="au flag"></i>Australia</div>
+            <div class="item" data-value="at"><i class="at flag"></i>Austria</div>
+            <div class="item" data-value="az"><i class="az flag"></i>Azerbaijan</div>
+            <div class="item" data-value="bs"><i class="bs flag"></i>Bahamas</div>
+            <div class="item" data-value="bh"><i class="bh flag"></i>Bahrain</div>
+            <div class="item" data-value="bd"><i class="bd flag"></i>Bangladesh</div>
+            <div class="item" data-value="bb"><i class="bb flag"></i>Barbados</div>
+            <div class="item" data-value="by"><i class="by flag"></i>Belarus</div>
+            <div class="item" data-value="be"><i class="be flag"></i>Belgium</div>
+            <div class="item" data-value="bz"><i class="bz flag"></i>Belize</div>
+            <div class="item" data-value="bj"><i class="bj flag"></i>Benin</div>
+            <div class="item" data-value="bm"><i class="bm flag"></i>Bermuda</div>
+            <div class="item" data-value="bt"><i class="bt flag"></i>Bhutan</div>
+            <div class="item" data-value="bo"><i class="bo flag"></i>Bolivia</div>
+            <div class="item" data-value="ba"><i class="ba flag"></i>Bosnia</div>
+            <div class="item" data-value="bw"><i class="bw flag"></i>Botswana</div>
+            <div class="item" data-value="bv"><i class="bv flag"></i>Bouvet Island</div>
+            <div class="item" data-value="br"><i class="br flag"></i>Brazil</div>
+            <div class="item" data-value="vg"><i class="vg flag"></i>British Virgin Islands</div>
+            <div class="item" data-value="bn"><i class="bn flag"></i>Brunei</div>
+            <div class="item" data-value="bg"><i class="bg flag"></i>Bulgaria</div>
+            <div class="item" data-value="bf"><i class="bf flag"></i>Burkina Faso</div>
+            <div class="item" data-value="mm"><i class="mm flag"></i>Burma</div>
+            <div class="item" data-value="bi"><i class="bi flag"></i>Burundi</div>
+            <div class="item" data-value="tc"><i class="tc flag"></i>Caicos Islands</div>
+            <div class="item" data-value="kh"><i class="kh flag"></i>Cambodia</div>
+            <div class="item" data-value="cm"><i class="cm flag"></i>Cameroon</div>
+            <div class="item" data-value="ca"><i class="ca flag"></i>Canada</div>
+            <div class="item" data-value="cv"><i class="cv flag"></i>Cape Verde</div>
+            <div class="item" data-value="ky"><i class="ky flag"></i>Cayman Islands</div>
+            <div class="item" data-value="cf"><i class="cf flag"></i>Central African Republic</div>
+            <div class="item" data-value="td"><i class="td flag"></i>Chad</div>
+            <div class="item" data-value="cl"><i class="cl flag"></i>Chile</div>
+            <div class="item" data-value="cn"><i class="cn flag"></i>China</div>
+            <div class="item" data-value="cx"><i class="cx flag"></i>Christmas Island</div>
+            <div class="item" data-value="cc"><i class="cc flag"></i>Cocos Islands</div>
+            <div class="item" data-value="co"><i class="co flag"></i>Colombia</div>
+            <div class="item" data-value="km"><i class="km flag"></i>Comoros</div>
+            <div class="item" data-value="cg"><i class="cg flag"></i>Congo Brazzaville</div>
+            <div class="item" data-value="cd"><i class="cd flag"></i>Congo</div>
+            <div class="item" data-value="ck"><i class="ck flag"></i>Cook Islands</div>
+            <div class="item" data-value="cr"><i class="cr flag"></i>Costa Rica</div>
+            <div class="item" data-value="ci"><i class="ci flag"></i>Cote Divoire</div>
+            <div class="item" data-value="hr"><i class="hr flag"></i>Croatia</div>
+            <div class="item" data-value="cu"><i class="cu flag"></i>Cuba</div>
+            <div class="item" data-value="cy"><i class="cy flag"></i>Cyprus</div>
+            <div class="item" data-value="cz"><i class="cz flag"></i>Czech Republic</div>
+            <div class="item" data-value="dk"><i class="dk flag"></i>Denmark</div>
+            <div class="item" data-value="dj"><i class="dj flag"></i>Djibouti</div>
+            <div class="item" data-value="dm"><i class="dm flag"></i>Dominica</div>
+            <div class="item" data-value="do"><i class="do flag"></i>Dominican Republic</div>
+            <div class="item" data-value="ec"><i class="ec flag"></i>Ecuador</div>
+            <div class="item" data-value="eg"><i class="eg flag"></i>Egypt</div>
+            <div class="item" data-value="sv"><i class="sv flag"></i>El Salvador</div>
+            <div class="item" data-value="gb"><i class="gb flag"></i>England</div>
+            <div class="item" data-value="gq"><i class="gq flag"></i>Equatorial Guinea</div>
+            <div class="item" data-value="er"><i class="er flag"></i>Eritrea</div>
+            <div class="item" data-value="ee"><i class="ee flag"></i>Estonia</div>
+            <div class="item" data-value="et"><i class="et flag"></i>Ethiopia</div>
+            <div class="item" data-value="eu"><i class="eu flag"></i>European Union</div>
+            <div class="item" data-value="fk"><i class="fk flag"></i>Falkland Islands</div>
+            <div class="item" data-value="fo"><i class="fo flag"></i>Faroe Islands</div>
+            <div class="item" data-value="fj"><i class="fj flag"></i>Fiji</div>
+            <div class="item" data-value="fi"><i class="fi flag"></i>Finland</div>
+            <div class="item" data-value="fr"><i class="fr flag"></i>France</div>
+            <div class="item" data-value="gf"><i class="gf flag"></i>French Guiana</div>
             <div class="item" data-value="pf"><i class="pf flag"></i>French Polynesia</div>
             <div class="item" data-value="tf"><i class="tf flag"></i>French Territories</div>
             <div class="item" data-value="ga"><i class="ga flag"></i>Gabon</div>
@@ -320,29 +320,29 @@
             <div class="item" data-value="uy"><i class="uy flag"></i>Uruguay</div>
             <div class="item" data-value="um"><i class="um flag"></i>Us Minor Islands</div>
             <div class="item" data-value="vi"><i class="vi flag"></i>Us Virgin Islands</div>
-            <div class="item" data-value="Uzbekistan"><i class="uz flag"></i>Uzbekistan</div>
-            <div class="item" data-value="Vanuatu"><i class="vu flag"></i>Vanuatu</div>
-            <div class="item" data-value="Vatican City"><i class="va flag"></i>Vatican City</div>
-            <div class="item" data-value="Venezuela"><i class="ve flag"></i>Venezuela</div>
-            <div class="item" data-value="Vietnam"><i class="vn flag"></i>Vietnam</div>
-            <div class="item" data-value="Wallis and Futuna"><i class="wf flag"></i>Wallis and Futuna</div>
-            <div class="item" data-value="Western Sahara"><i class="eh flag"></i>Western Sahara</div>
-            <div class="item" data-value="Yemen"><i class="ye flag"></i>Yemen</div>
-            <div class="item" data-value="Zambia"><i class="zm flag"></i>Zambia</div>
-            <div class="item" data-value="Zimbabwe"><i class="zw flag"></i>Zimbabwe</div>
+            <div class="item" data-value="uz"><i class="uz flag"></i>Uzbekistan</div>
+            <div class="item" data-value="vu"><i class="vu flag"></i>Vanuatu</div>
+            <div class="item" data-value="va"><i class="va flag"></i>Vatican City</div>
+            <div class="item" data-value="ve"><i class="ve flag"></i>Venezuela</div>
+            <div class="item" data-value="vn"><i class="vn flag"></i>Vietnam</div>
+            <div class="item" data-value="wf"><i class="wf flag"></i>Wallis and Futuna</div>
+            <div class="item" data-value="eh"><i class="eh flag"></i>Western Sahara</div>
+            <div class="item" data-value="ye"><i class="ye flag"></i>Yemen</div>
+            <div class="item" data-value="zm"><i class="zm flag"></i>Zambia</div>
+            <div class="item" data-value="zw"><i class="zw flag"></i>Zimbabwe</div>
         </div>
        </div>
     </div>
   </div>
-  <input class="ui orange button" type="submit" name="proceed-order" id="proceed-order" value="Save" /><br/>
+  <input class="ui orange button" type="submit" name="update-order" id="update-order" value="Update" /><br/>
 
   </form>
 <!-- to avoid multiple data enties make rest inside of form -->
 <?php     
 
-  if(array_key_exists('proceed-order', $_POST)) { 
+  if(array_key_exists('proceed-order', $_POST)) { //update orders operation
             
-      $Name   = $_POST['email'];
+      $Name   = $_POST['firstname'];
       $Address1   = $_POST['address1'];
       $Address2   = $_POST['address2'];
       $db_country=$_POST['country'];
@@ -369,21 +369,16 @@
       $response = curl_exec($curl);
       $data = json_decode($response,true);
       curl_close($curl);
-      
       $db_orderId= $data["orderId"];
       $db_orderKey= $data["orderKey"];
+      
       $db_orderDate= $data["orderDate"];
 
       $db_orderStatus= $data["orderStatus"];
       $conn = mysqli_connect("localhost", "root", '', "shipping_automation");
       
-     $insertSql ="INSERT INTO `order_info`  VALUES ('$db_orderId','$db_orderKey','$db_orderDate','$db_orderStatus','$db_adress','$db_state','$db_country','1','0000-00-00','adreress','adreress')"; 
+      $insertSql ="INSERT INTO `order_info`  VALUES ('$db_orderId','$db_orderKey','2015-07-05','$db_orderStatus','$db_adress','$db_state','$db_country','1','adreress','adreress','adreress')"; 
      
-     # $insertSql2="INSERT INTO `order_info`  VALUES ('$db_orderId','$db_orderKey','0000-10-05','awaiting','order key deneniyor 2','Istanbul','Turkey','1','0000-00-00','adreress','adreress')";    
-
-      
-
-
       if (mysqli_query($conn, $insertSql)) {
         echo "Record added successfully";
       } else {
@@ -393,6 +388,11 @@
       mysqli_close($conn);
 
 
-
+?>
+      <script type="text/javascript">
+      window.location.href=window.location.href;
+      </script>
+    
+<?php
   }            
 ?>

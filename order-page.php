@@ -3,16 +3,11 @@
               <i class="plus icon"></i>
               New Order
             </button>
-            <form action="" method="POST">
-            <button class="ui red compact labeled icon button" name="delete-order" style="margin-bottom:20px;" id="delete-order">
-            <i class="minus circle icon"></i>
-              Delete Orders
-            </button>
-            </form>
-            <button class="ui blue compact labeled icon button" style="margin-bottom:20px;" id="new-order-button">
-            <i class="minus circle icon"></i>
+            <button class="ui purple compact labeled icon button" style="margin-bottom:20px;" id="update-order-button">
+              <i class="plus icon"></i>
               Update Orders
             </button>
+           
             <form action="" method="POST">
             <button class="ui right floated teal big compact labeled icon button" style="margin-bottom:20px;" id="create-label">
             <i class="file pdf outline icon"></i>
@@ -20,11 +15,12 @@
             </button>
 
             </form>
-            <!-- table goes here --> 
+            <!-- table goes here -->  
 
             <?php include_once "./deleted/sandbox/checkbox-form.php"?>
       
-          </div>         
+          </div>      
+
 <?php
 
 if(array_key_exists('delete-order', $_POST)) {
@@ -80,20 +76,16 @@ if(array_key_exists('create-label', $_POST)) {
     ),
   ));
   
-  $response = curl_exec($curl);
-  
+  $response = curl_exec($curl);  
   curl_close($curl);
   echo $response;
-
   echo '<script language="javascript">';
   echo 'alert("'. $httpcode.'")';
   echo '</script>';  
-
 }
-
 ?>
 <script>
-$(document).ready(function() {
+
  var table = $('#example').DataTable({     
  'columnDefs': [
     {
@@ -141,6 +133,5 @@ $('#frm-example').on('submit', function(e){
     // Prevent actual form submission
     e.preventDefault();
 });   
-});
 
 </script>

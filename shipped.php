@@ -77,10 +77,13 @@ $client = new Client([
               </div>
           </div>
         <div class="eleven wide column" id="dashboard-monitor">
-          <?php include_once "order-page.php" ?>
+        
+          <?php include_once "./deleted/sandbox/shipped-form.php" ?>
+        
         </div>
         <div class="three wide column">
         <?php include_once "order-monitor.php" ?>
+     
         <?php include_once "balance-monitor.php" ?>
         </div>
       </div>
@@ -92,12 +95,14 @@ $client = new Client([
       <div class="ui modal" id="new-order-modal">
        <div class="scrolling content" style="margin-bottom:50px;">
         <?php include_once "./forms/new-order-form.php" ?>
+        
       </div>
       </div>
 
       <div class="ui modal" id="update-order-modal">
        <div class="scrolling content" style="margin-bottom:50px;">
         <?php include_once "./forms/update-order-form.php" ?>
+        
       </div>
       </div>
 
@@ -117,29 +122,28 @@ $client = new Client([
 </script>
 
       <script>  
-        $(document).ready( function () {
+   $(document).ready( function () {
 //tab opener
-            $('.account-settings-modal.menu .item').tab({history:false});
-            $('#password-reset-controller').click(function(){      
-                $("#password-reset-form").toggleClass('gosterme');
-            });
-        });
-
-
-        $("#history-page-button").click(function(){
-    $("#dashboard-monitor").load("history-page.php");
-  });
-  $("#order-page-button").click(function(){
-    $("#dashboard-monitor").load("order-page.php");
+    $('.account-settings-modal.menu .item').tab({history:false});
+    $('#password-reset-controller').click(function(){      
+    $("#password-reset-form").toggleClass('gosterme');
+});
+      });
+      $("#history-page-button").click(function(){
+  $("#dashboard-monitor").load("history-page.php");
+});
+$("#order-page-button").click(function(){
+  $("#dashboard-monitor").load("order-page.php");
   });     
 
 
 //modal openers        
         $("#new-order-button").click( function(){
-              $("#new-order-modal").modal("show");
+            $("#new-order-modal").modal("show");
         });
+
         $("#update-order-button").click( function(){
-              $("#update-order-modal").modal("show");
+            $("#update-order-modal").modal("show");
         });
         $("#manuel-order-opener").click( function(){
             $("#manuel-order-modal").modal("show");
