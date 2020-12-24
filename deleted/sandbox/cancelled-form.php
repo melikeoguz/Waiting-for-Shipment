@@ -4,7 +4,7 @@ require_once "vendor/autoload.php";
 use GuzzleHttp\Client;
 $client = new GuzzleHttp\Client();
 try {
-       $responseArray = $client->request('GET', 'http://ssapi.shipstation.com/orders?customerName=headhoncho@whitehouse.gov&orderStatus=awaiting_shipment&page=1&pageSize=100', ['auth' => ['7ef956961bfd449da92bfc206f315c83', 'c295dc04fed743fd8cd7269b82a3da8b']]);   
+       $responseArray = $client->request('GET', 'http://ssapi.shipstation.com/orders?customerName=headhoncho@whitehouse.gov&orderStatus=cancelled&page=1&pageSize=100', ['auth' => ['7ef956961bfd449da92bfc206f315c83', 'c295dc04fed743fd8cd7269b82a3da8b']]);   
        if($responseArray->getStatusCode()!= 200){
          throw new Exception("Error");
        }
@@ -17,10 +17,7 @@ try {
 ?>
 
 <form id="frm-example" action="index.php" method="POST">
-<input class="ui red compact labeled icon button" onClick="return confirm('Are you sure you want to delete?')" type="submit" name="delete-order" value="Delete Orders">
-<input class="ui blue compact labeled icon button" type="submit" name="update-order" value="Update Orders">
-<input class="ui green compact labeled icon button" type="submit" name="create-label" value="Create Label">
-<input class="ui purple compact labeled icon button" type="submit" name="void-label" value="Void Label">
+<input class="ui red compact labeled icon button" onClick="return confirm('Are you sure you want to delete?')" type="submit" name="delete-order" value="Delete Permanently">
 
 
 
