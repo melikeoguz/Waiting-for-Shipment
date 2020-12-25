@@ -88,7 +88,7 @@
         <i class="dropdown icon"></i>
         <div class="default text">Select Country</div>
         <div class="menu">
-        <div class="item" data-value="Afghanistan"><i class="af flag"></i>Afghanistan</div>
+            <div class="item" data-value="Afghanistan"><i class="af flag"></i>Afghanistan</div>
             <div class="item" data-value="Aland Islands"><i class="ax flag"></i>Aland Islands</div>
             <div class="item" data-value="Albania"><i class="al flag"></i>Albania</div>
             <div class="item" data-value="Algeria"><i class="dz flag"></i>Algeria</div>
@@ -377,22 +377,9 @@
       $db_orderStatus= $data["orderStatus"];
       $conn = mysqli_connect("localhost", "root", '', "shipping_automation");
       
-     $insertSql ="INSERT INTO `order_info`  VALUES ('$db_orderId','$db_orderKey','$db_orderDate','$db_orderStatus','$db_adress','$db_state','$db_country','1','0000-00-00','adreress','adreress')"; 
+      $insertSql ="INSERT INTO `order_info`  VALUES ('$db_orderId','$db_orderKey','$db_orderDate','$db_orderStatus','$db_adress','$db_state','$db_country','1','0000-00-00','adreress','adreress')"; 
+      mysqli_query($conn, $insertSql);
+
      
-     # $insertSql2="INSERT INTO `order_info`  VALUES ('$db_orderId','$db_orderKey','0000-10-05','awaiting','order key deneniyor 2','Istanbul','Turkey','1','0000-00-00','adreress','adreress')";    
-
-      
-
-
-      if (mysqli_query($conn, $insertSql)) {
-        echo "Record added successfully";
-      } else {
-        echo "Error record: " . mysqli_error($conn);
-      }
-
-      mysqli_close($conn);
-
-
-
   }            
 ?>

@@ -100,7 +100,7 @@ if(array_key_exists('son', $_POST)) {
           
     $db_firstName = $_POST['customer-first-name'];
     $db_lastName  = $_POST['customer-last-name'];
-    $$db_email    = $_POST['customer-email]'];
+    $db_email    = $_POST['customer-email'];
     $db_phone     =$_POST['customer-phone']; 
     $db_companyName= $_POST['customer-company-name'];
     $db_website=$_POST['customer-website'];
@@ -113,9 +113,8 @@ if(array_key_exists('son', $_POST)) {
     if (!$conn) {
       die("Connection failed: " . mysqli_connect_error());
     }
-    
-    $id=15;
-    $insertSql ="INSERT INTO `customer_info`  VALUES ('14','$db_firstName','$db_lastName','$db_email','$db_phone','$db_companyName','$db_website','$db_balance','$db_govId')"; 
+     
+    $insertSql ="INSERT INTO `customer_info`  VALUES ('','$db_firstName','$db_lastName','$db_email','$db_phone','$db_companyName','$db_website','$db_balance','$db_govId')"; 
    
     if (mysqli_query($conn, $insertSql)) {
       echo "Record added successfully";

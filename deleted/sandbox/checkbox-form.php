@@ -60,6 +60,7 @@ try {
          <th>Receipient</th>
          <th>Ship Date</th>
          <th>Order Status</th>
+
       </tr>
    </tfoot> 
 </table> 

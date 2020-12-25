@@ -119,7 +119,20 @@
                           </span>
                           <span class="right floated">
                           <div class="content" style="padding-top: 25px">
-                            1230
+                            <?php
+                              include("connected.php");
+      
+                                $query = "SELECT COUNT(*) FROM `order_info`";
+
+                                    if (mysqli_query($conn, $query)) {
+                                       echo "Record added successfully";
+                                      } else {
+                                        echo "Error record: " . mysqli_error($conn);
+                                          }
+
+                                            echo  $query;
+                                            mysqli_close($conn);
+                            ?>
                           </div>
                           </span>
                         </h2>
